@@ -1,0 +1,31 @@
+:root {
+  color-scheme: dark;
+  --bg: #07051a;
+  --bg-2: #100a24;
+  --card: #16102c;
+  --card-2: #1d1538;
+  --line: rgba(244, 241, 255, 0.08);
+  --text: #f6f3ff;
+  --muted: #a99bc8;
+  --faint: #6f648c;
+  --accent: #8b6cff;
+  --accent-2: #ff4f9a;
+  --live: #3dffb0;
+  --atp: #8eb2ff;
+  --wta: #ff8ad8;
+  --ch: #f0b429;
+  --danger: #ff8d8d;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --nav: 4.4rem;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --font: "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: var(--font); }
+body { min-height: 100dvh; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+img { max-width: 100%; }
+a { color: var(--accent); }

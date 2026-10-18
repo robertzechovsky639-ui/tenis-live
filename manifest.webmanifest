@@ -1,0 +1,17 @@
+{
+  "name": "Tenis Live",
+  "short_name": "Tenis",
+  "description": "Živé výsledky ATP, Challenger a WTA.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07051a",
+  "theme_color": "#07051a",
+  "lang": "cs",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
