@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07051a">
+  <meta name="description" content="Živé tenisové výsledky ATP, Challenger a WTA. Časy v Praze, šance na výhru.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Tenis Live">
+  <title>Tenis Live</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top" id="top"></header>
+    <main id="main"><p class="empty">Načítám zápasy…</p></main>
+    <nav class="nav" id="nav"></nav>
+  </div>
+  <noscript><p class="empty">Aplikace potřebuje JavaScript.</p></noscript>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

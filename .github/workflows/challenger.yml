@@ -1,0 +1,38 @@
+name: Snímek Challengeru
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stáhnout Challenger, jen když je secret
+        env:
+          API_TENNIS_KEY: ${{ secrets.API_TENNIS_KEY }}
+        run: |
+          if [ -z "${API_TENNIS_KEY}" ]; then
+            echo "API_TENNIS_KEY není v secretech. Veřejný 365scores Challenger v aplikaci jede i bez tohoto snímku."
+            exit 0
+          fi
+          python3 scripts/fetch_challenger.py
+      - name: Uložit změnu
+        run: |
+          if [ ! -f data/challenger.json ]; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/challenger.json
+          if git diff --cached --quiet; then
+            echo "beze změny"
+            exit 0
+          fi
+          git commit -m "Aktualizace snímku Challengeru"
+          git push
